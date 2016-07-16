@@ -1,4 +1,4 @@
-{ stdenv, fetchurl, pkgconfig, glib, gpm, file, e2fsprogs, libX11, libICE, perl, zip, unzip, gettext, slang
+{ stdenv, fetchurl, pkgconfig, glib, file, libX11, libICE, perl, zip, unzip, gettext, slang
 }:
 
 stdenv.mkDerivation rec {
@@ -11,7 +11,7 @@ stdenv.mkDerivation rec {
     sha256 = "0447bdddc0baa81866e66f50f9a545d29d6eebb68b0ab46c98d8fddd2bf4e44d";
   };
 
-  buildInputs = [ pkgconfig perl glib gpm slang zip unzip file gettext libX11 libICE e2fsprogs ];
+  buildInputs = [ pkgconfig perl glib slang zip unzip file gettext libX11 libICE ];
 
   meta = {
     description = "File Manager and User Shell for the GNU Project";
