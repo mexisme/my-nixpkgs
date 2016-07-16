@@ -7,6 +7,7 @@ let
 
   self = {
     mc = callPackage ./pkgs/mc { };
+    rocker = callPackage ./pkgs/rocker { };
   };
 in
 self
