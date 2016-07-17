@@ -6,9 +6,9 @@ stdenv.mkDerivation rec {
   version = "4.8.17";
 
   src = fetchurl {
-    #url = http://www.midnight-commander.org/downloads/mc-${version}.tar.bz2;
+    #url = "http://www.midnight-commander.org/downloads/mc-${version}.tar.bz2";
     #sha256 = "66d0cb37baaed8ef930f8ad25a634adad4f264eb61820893920ac87b9dfb783b";
-    url = http://www.midnight-commander.org/downloads/mc-${version}.tar.xz;
+    url = "http://www.midnight-commander.org/downloads/mc-${version}.tar.xz";
     sha256 = "0447bdddc0baa81866e66f50f9a545d29d6eebb68b0ab46c98d8fddd2bf4e44d";
   };
 
