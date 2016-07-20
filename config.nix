@@ -1,11 +1,9 @@
 {
   allowUnfree = true;
   packageOverrides = pkgs_: with pkgs_; {  # pkgs_ is the original set of packages
-    callPackage = lib.callPackageWith (pkgs_ // xlibs);
-
     python3 = python35;
     # The standard version will only work Linux 
-    mc = callPackage ./pkgs/mc { };
+    mc = lib.callPackageWith (pkgs_ // xlibs) ./pkgs/mc { };
 
     # pkgs is your overridden set of packages itself
     my-tools = with pkgs; buildEnv {
