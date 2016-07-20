@@ -38,7 +38,8 @@
         mercurial
         mr
         patchelf
-        #python27Packages.hg-git
+        python27Packages.hg-git
+        #python35Packages.hg-git
         sbt
         silver-searcher
         subversion
