@@ -35,7 +35,7 @@
         go2nix
         gradle
         leiningen
-        #mercurial
+        mercurial
         mr
         patchelf
         #python27Packages.hg-git
