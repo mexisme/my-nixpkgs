@@ -4,14 +4,16 @@
     callPackage = lib.callPackageWith (pkgs_ // xlibs);
 
     python3 = python35;
-    #with python35Packages; { pytest = pytest_28; }
+    # The standard version will only work Linux 
     mc = callPackage ./pkgs/mc { };
 
     # pkgs is your overridden set of packages itself
     my-tools = with pkgs; buildEnv {
       name = "my-tools";
       paths = [
-        mc  # The standard version will only work Linux
+        irssi
+        #irssi_otr   # Appears to use GCC-isms on linker?
+        mc
         "nix-zsh-completions"
         python35Packages.awscli
 
@@ -29,15 +31,18 @@
         "apache-maven"
         bundix
         bundler
+        cmake
         getopt
         git
         gitAndTools.gitflow
         go2nix
         gradle
         leiningen
+        libgit2
         mercurial
         mr
         patchelf
+        pkgconfig
         python27Packages.hg-git
         #python35Packages.hg-git
         sbt
