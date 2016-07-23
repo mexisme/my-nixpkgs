@@ -6,19 +6,13 @@
     mc = lib.callPackageWith (pkgs_ // xlibs) ./pkgs/mc { };
 
     # pkgs is your overridden set of packages itself
-    my-tools = with pkgs; buildEnv {
-      name = "my-tools";
+    my-dev-libs = with pkgs; buildEnv {
+      name = "my-dev-libs";
       paths = [
-        irssi
-        #irssi_otr   # Appears to use GCC-isms on linker?
-        mc
-        "nix-zsh-completions"
-        python35Packages.awscli
-
-        #tmux
-        xz
-        zile
-        zsh
+        getopt
+        libiconv
+        libgit2
+        pkgconfig
       ];
     };
 
@@ -30,17 +24,14 @@
         bundix
         bundler
         cmake
-        getopt
         git
         gitAndTools.gitflow
         go2nix
         gradle
         leiningen
-        libgit2
         mercurial
         mr
         patchelf
-        pkgconfig
         python27Packages.hg-git
         #python35Packages.hg-git
         sbt
@@ -71,6 +62,23 @@
         #rustc
         scala
         #stack
+      ];
+    };
+
+    # pkgs is your overridden set of packages itself
+    my-tools = with pkgs; buildEnv {
+      name = "my-tools";
+      paths = [
+        irssi
+        #irssi_otr   # Appears to use GCC-isms on linker?
+        mc
+        "nix-zsh-completions"
+        python35Packages.awscli
+
+        #tmux
+        xz
+        zile
+        zsh
       ];
     };
   };
