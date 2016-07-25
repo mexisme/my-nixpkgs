@@ -71,7 +71,7 @@
       paths = [
         irssi
         #irssi_otr   # Appears to use GCC-isms on linker?
-        mc
+        #mc
         "nix-zsh-completions"
         python35Packages.awscli
 
