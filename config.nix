@@ -60,10 +60,9 @@
     my-tools = with pkgs; buildEnv {
       name = "my-tools";
       paths = [
-        #cacert  # This seems to be installed by default, now?
         curl
         ddrescue
-        faac
+        #faac
         faad2
         flac
         htop
