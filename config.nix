@@ -34,6 +34,7 @@
         patchelf
         python27Packages.hg-git
         #python35Packages.hg-git
+        rake
         sbt
         silver-searcher
         subversion
