@@ -69,6 +69,10 @@
     my-tools = with pkgs; buildEnv {
       name = "my-tools";
       paths = [
+        #faac
+        faad2
+        flac
+        lame
         irssi
         #irssi_otr   # Appears to use GCC-isms on linker?
         mc
