@@ -71,6 +71,10 @@
       name = "my-tools";
       paths = [
         curl
+        #faac
+        faad2
+        flac
+        lame
         irssi
         #irssi_otr   # Appears to use GCC-isms on linker?
         mc
