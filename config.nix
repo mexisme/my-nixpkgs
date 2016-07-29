@@ -1,9 +1,13 @@
 {
   allowUnfree = true;
   packageOverrides = pkgs_: with pkgs_; {  # pkgs_ is the original set of packages
-    python3 = python35;
+    #jre = oraclejre8;
+    jre = jre8;
+    jdk = jdk8;
+    openjdk = openjdk8;
     # The standard version will only work Linux 
     mc = lib.callPackageWith (pkgs_ // xlibs) ./pkgs/mc { };
+    python3 = python35;
 
     # pkgs is your overridden set of packages itself
     my-dev-libs = with pkgs; buildEnv {
