@@ -34,7 +34,7 @@
         patchelf
         python27Packages.hg-git
         #python35Packages.hg-git
-        rake
+        #rake  # Clashes with bundler?
         sbt
         silver-searcher
         subversion
@@ -70,6 +70,7 @@
     my-tools = with pkgs; buildEnv {
       name = "my-tools";
       paths = [
+        curl
         #faac
         faad2
         flac
