@@ -14,8 +14,10 @@
       name = "my-dev-libs";
       paths = [
         getopt
+        #intltool
         libiconv
         libgit2
+        openssl
         pkgconfig
       ];
     };
@@ -25,14 +27,16 @@
       name = "my-dev-tools";
       paths = [
         "apache-maven"
-        bundix
+        #bundix  ## Perl-WWW-Curl is broken, ATM
         bundler
         cmake
+        direnv
+        editorconfig-core-c
         git
         gitAndTools.gitflow
-        go2nix
+        #go2nix  ## Perl-WWW-Curl is broken, ATM
         gradle
-        leiningen
+        #leiningen
         mercurial
         mr
         patchelf
