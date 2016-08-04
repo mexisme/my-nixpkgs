@@ -27,7 +27,7 @@
       name = "my-dev-tools";
       paths = [
         "apache-maven"
-        bundix
+        #bundix  ## Perl-WWW-Curl is broken, ATM
         bundler
         cmake
         direnv
@@ -36,7 +36,7 @@
         git-lfs
         gitAndTools.git-annex-remote-b2
         gitAndTools.gitflow
-        go2nix
+        #go2nix  ## Perl-WWW-Curl is broken, ATM
         gradle
         #leiningen   # gnupg won't build properly on clang
         mercurial
