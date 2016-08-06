@@ -27,14 +27,16 @@
       name = "my-dev-tools";
       paths = [
         "apache-maven"
-        #bundix  ## Perl-WWW-Curl is broken, ATM
+        bundix
         bundler
         cmake
         direnv
         editorconfig-core-c
         git
+        git-lfs
+        gitAndTools.git-annex-remote-b2
         gitAndTools.gitflow
-        #go2nix  ## Perl-WWW-Curl is broken, ATM
+        go2nix
         gradle
         #leiningen
         mercurial
