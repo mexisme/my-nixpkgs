@@ -33,6 +33,8 @@
         direnv
         editorconfig-core-c
         git
+        git-lfs
+        gitAndTools.git-annex-remote-b2
         gitAndTools.gitflow
         #go2nix  ## Perl-WWW-Curl is broken, ATM
         gradle
