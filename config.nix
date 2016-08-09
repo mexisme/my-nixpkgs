@@ -38,7 +38,7 @@
         gitAndTools.gitflow
         go2nix
         gradle
-        #leiningen
+        #leiningen   # gnupg won't build properly on clang
         mercurial
         mr
         patchelf
@@ -80,18 +80,19 @@
     my-tools = with pkgs; buildEnv {
       name = "my-tools";
       paths = [
+        cacert
         curl
         #faac
         faad2
         flac
-        lame
         irssi
         #irssi_otr   # Appears to use GCC-isms on linker?
+        lame
         mc
         "nix-zsh-completions"
         python35Packages.awscli
-
-        #tmux
+        screen
+        tmux
         xz
         zile
         zsh
