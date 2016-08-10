@@ -8,6 +8,7 @@
     # The standard version will only work Linux 
     mc = lib.callPackageWith (pkgs_ // xlibs) ./pkgs/mc { };
     python3 = python35;
+    #python = python35;
 
     # pkgs is your overridden set of packages itself
     my-dev-libs = with pkgs; buildEnv {
@@ -32,19 +33,20 @@
         cmake
         direnv
         editorconfig-core-c
+        emacs
         git
         git-lfs
         gitAndTools.git-annex-remote-b2
         gitAndTools.gitflow
         go2nix
         gradle
-        #leiningen   # gnupg won't build properly on clang
+        leiningen   # gnupg won't build properly on clang
         mercurial
         mr
         patchelf
         python27Packages.hg-git
         #python35Packages.hg-git
-        #rake  # Clashes with bundler?
+        rake  # Clashes with bundler?
         sbt
         silver-searcher
         subversion
