@@ -46,7 +46,7 @@
         patchelf
         python27Packages.hg-git
         #python35Packages.hg-git
-        rake  # Clashes with bundler?
+        #rake  # Clashes with bundler?
         sbt
         silver-searcher
         subversion
