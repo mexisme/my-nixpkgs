@@ -8,6 +8,7 @@
     # The standard version will only work Linux 
     mc = lib.callPackageWith (pkgs_ // xlibs) ./pkgs/mc { };
     python3 = python35;
+    #python = python35;
 
     # pkgs is your overridden set of packages itself
     my-dev-libs = with pkgs; buildEnv {
@@ -32,13 +33,14 @@
         cmake
         direnv
         editorconfig-core-c
+        emacs
         git
         git-lfs
         gitAndTools.git-annex-remote-b2
         gitAndTools.gitflow
         #go2nix  ## Perl-WWW-Curl is broken, ATM
         gradle
-        #leiningen
+        leiningen   # gnupg won't build properly on clang
         mercurial
         mr
         patchelf
@@ -80,18 +82,19 @@
     my-tools = with pkgs; buildEnv {
       name = "my-tools";
       paths = [
+        cacert
         curl
         #faac
         faad2
         flac
-        lame
         irssi
         #irssi_otr   # Appears to use GCC-isms on linker?
+        lame
         mc
         "nix-zsh-completions"
         python35Packages.awscli
-
-        #tmux
+        screen
+        tmux
         xz
         zile
         zsh
