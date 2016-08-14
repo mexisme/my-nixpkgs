@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./ca-certs.nix
     ];
 
   # Use the GRUB 2 boot loader.
@@ -29,7 +30,7 @@
   # Set your time zone.
   time.timeZone = "Pacific/Auckland";
 
-  virtualisation.virtualbox.guest.enable = true;
+  #virtualisation.virtualbox.guest.enable = true;
 
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
@@ -37,16 +38,20 @@
     #kdeApps_stable
     emacs
     git
+    rsync
     tmux
     screen
     vim
     wget
+    zile
 
     chromium
     firefox
 
     python
     ruby
+
+    kde5.kde-gtk-config
   ];
 
   fonts = {
@@ -57,7 +62,7 @@
       # dejavu-fonts
       # freefont-ttf
       font-droid
-      google-fonts
+      # google-fonts  # Broken in latest
       inconsolata  # monospaced
       ubuntu_font_family  # Ubuntu fonts
       unifont # some international languages
