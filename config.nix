@@ -17,7 +17,7 @@
         getopt
         #intltool
         libiconv
-        libgit2
+        #libgit2
         openssl
         pkgconfig
       ];
@@ -33,7 +33,7 @@
         cmake
         direnv
         editorconfig-core-c
-        emacs
+        #emacs
         git
         git-lfs
         gitAndTools.git-annex-remote-b2
