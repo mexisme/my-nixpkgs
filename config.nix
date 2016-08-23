@@ -40,7 +40,7 @@
         gitAndTools.gitflow
         go2nix
         gradle
-        leiningen   # gnupg won't build properly on clang
+        leiningen
         mercurial
         mr
         patchelf
