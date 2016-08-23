@@ -92,6 +92,7 @@
         lame
         mc
         "nix-zsh-completions"
+        packer
         python35Packages.awscli
         screen
         tmux
