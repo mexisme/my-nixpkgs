@@ -74,7 +74,7 @@
         # "ruby-2.3"
         rustc
         scala
-        stack
+        #stack  # libsecurity_utilities-osx-10.7.5 fails to build
       ];
     };
 
