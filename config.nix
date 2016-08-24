@@ -74,7 +74,7 @@
         # "ruby-2.3"
         rustc
         scala
-        #stack
+        stack
       ];
     };
 
