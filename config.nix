@@ -84,9 +84,11 @@
       paths = [
         cacert
         curl
+        ddrescue
         #faac
         faad2
         flac
+        htop
         irssi
         #irssi_otr   # Appears to use GCC-isms on linker?
         lame
