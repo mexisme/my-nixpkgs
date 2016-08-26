@@ -82,7 +82,7 @@
     my-tools = with pkgs; buildEnv {
       name = "my-tools";
       paths = [
-        cacert
+        #cacert  # This seems to be installed by default, now?
         curl
         ddrescue
         #faac
