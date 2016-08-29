@@ -33,7 +33,7 @@
         cmake
         direnv
         editorconfig-core-c
-        #emacs
+        emacs
         git
         git-lfs
         gitAndTools.git-annex-remote-b2
