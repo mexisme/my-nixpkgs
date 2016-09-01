@@ -10,18 +10,7 @@
     python3 = python35;
     #python = python35;
 
-    # pkgs is your overridden set of packages itself
-    my-dev-libs = with pkgs; buildEnv {
-      name = "my-dev-libs";
-      paths = [
-        getopt
-        #intltool
-        libiconv
-        #libgit2
-        openssl
-        pkgconfig
-      ];
-    };
+    excon = lib.callPackageWith pkgs_ ./pkgs/ruby-modules/excon {};
 
     # pkgs is your overridden set of packages itself
     my-dev-tools = with pkgs; buildEnv {
@@ -29,11 +18,10 @@
       paths = [
         "apache-maven"
         bundix
-        bundler
         cmake
         direnv
         editorconfig-core-c
-        #emacs
+        emacs
         git
         git-lfs
         gitAndTools.git-annex-remote-b2
@@ -55,8 +43,8 @@
     };
 
     # pkgs is your overridden set of packages itself
-    my-dev-langs = with pkgs; buildEnv {
-      name = "my-dev-langs";
+    my-dev-langs-libs = with pkgs; buildEnv {
+      name = "my-dev-langs-libs";
       paths = [
         # Languages:
         elixir
@@ -75,6 +63,17 @@
         rustc
         scala
         #stack  # libsecurity_utilities-osx-10.7.5 fails to build
+
+        # Libraries:
+        bundler
+        #excon
+        getopt
+        #intltool
+        libiconv
+        #libgit2
+        openssl
+        pkgconfig
+
       ];
     };
 
