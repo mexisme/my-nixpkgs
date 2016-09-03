@@ -16,6 +16,7 @@
     my-dev-tools = with pkgs; buildEnv {
       name = "my-dev-tools";
       paths = [
+        asciidoc
         "apache-maven"
         bundix
         cmake
@@ -94,6 +95,7 @@
         mc
         "nix-zsh-completions"
         packer
+        pwgen
         python35Packages.awscli
         screen
         tmux
