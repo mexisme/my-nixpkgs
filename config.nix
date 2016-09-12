@@ -9,6 +9,7 @@
     mc = lib.callPackageWith (pkgs_ // xlibs) ./pkgs/mc { };
     python3 = python35;
     #python = python35;
+    #go = go_1_6;
 
     excon = lib.callPackageWith pkgs_ ./pkgs/ruby-modules/excon {};
 
