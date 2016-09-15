@@ -60,7 +60,7 @@
         #cacert  # This seems to be installed by default, now?
         curl
         ddrescue
-        faac
+        #faac
         faad2
         flac
         htop
@@ -115,7 +115,7 @@
       name = "my-rustlang-tools";
       paths = [
         rustc
-        rustfmt   ## Can't compile rustc!
+        #rustfmt   ## Can't compile rustc!
       ];
     };
 
