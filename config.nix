@@ -9,7 +9,6 @@
     mc = lib.callPackageWith (pkgs_ // xlibs) ./pkgs/mc { };
     python3 = python35;
     #python = python35;
-    go = go_1_6;
 
     excon = lib.callPackageWith pkgs_ ./pkgs/ruby-modules/excon {};
 
@@ -21,14 +20,14 @@
         "apache-maven"
         bundix
         cmake
-        direnv   ## Problems with go and SSL
+        direnv
         editorconfig-core-c
         emacs
         git
-        git-lfs   ## Problems with go and SSL
-        gitAndTools.git-annex-remote-b2   ## Problems with go and SSL
+        git-lfs
+        gitAndTools.git-annex-remote-b2
         gitAndTools.gitflow
-        go2nix   ## Problems with go and SSL
+        go2nix
         gradle
         leiningen
         mercurial
@@ -52,7 +51,7 @@
         # Languages:
         elixir
         # elixirscript is not yet in Nix
-        go   ## Problems with go and SSL
+        go
         ghc
         nodejs
         python
@@ -63,7 +62,7 @@
         # "ruby-2.1"
         # "ruby-2.2"
         # "ruby-2.3"
-        rustc   ## Can't compile rustc!
+        rustc
         scala
         #stack  # libsecurity_utilities-osx-10.7.5 fails to build
 
