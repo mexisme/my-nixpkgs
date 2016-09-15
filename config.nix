@@ -123,7 +123,7 @@
       paths = [
         cargo
         rustc
-        rustfmt   ## Can't compile rustc!
+        #rustfmt   ## Can't compile rustc!
       ];
     };
 
