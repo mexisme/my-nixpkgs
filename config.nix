@@ -5,12 +5,12 @@
     jre = jre8;
     jdk = jdk8;
     openjdk = openjdk8;
-    # The standard version will only work Linux 
+    # The standard version will only work Linux
     mc = lib.callPackageWith (pkgs_ // xlibs) ./pkgs/mc { };
     python3 = python35;
     #python = python35;
 
-    excon = lib.callPackageWith pkgs_ ./pkgs/ruby-modules/excon {};
+    #excon = lib.callPackageWith pkgs_ ./pkgs/ruby-modules/excon {};
 
     # pkgs is your overridden set of packages itself
     my-dev-tools = with pkgs; buildEnv {
@@ -18,26 +18,13 @@
       paths = [
         asciidoc
         "apache-maven"
-        bundix
         cmake
-        direnv
         editorconfig-core-c
         emacs
         git
-        git-lfs
-        gitAndTools.git-annex-remote-b2
         gitAndTools.gitflow
-        go2nix
-        gradle
-        leiningen
-        mercurial
         mr
         patchelf
-        python27Packages.hg-git
-        #python35Packages.hg-git
-        #rake  # Clashes with bundler?
-        #rustfmt   ## Can't compile rustc!
-        sbt
         silver-searcher
         subversion
         upx
@@ -51,23 +38,10 @@
         # Languages:
         elixir
         # elixirscript is not yet in Nix
-        go
         ghc
-        nodejs
-        python
-        python3
-        #python35
-        ruby
-        # "ruby-1.9"
-        # "ruby-2.1"
-        # "ruby-2.2"
-        # "ruby-2.3"
-        rustc
-        scala
         #stack  # libsecurity_utilities-osx-10.7.5 fails to build
 
         # Libraries:
-        bundler
         #excon
         getopt
         #intltool
@@ -95,14 +69,87 @@
         lame
         mc
         "nix-zsh-completions"
-        packer   ## Problems with go and SSL
         pwgen
-        python35Packages.awscli
         screen
         tmux
         xz
         zile
         zsh
+      ];
+    };
+
+    # pkgs is your overridden set of packages itself
+    my-python-tools = with pkgs; buildEnv {
+      name = "my-python-tools";
+      paths = [
+        python
+        python3
+        #python35
+
+        mercurial
+        python35Packages.awscli
+        python27Packages.hg-git
+        #python35Packages.hg-git
+      ];
+    };
+
+    # pkgs is your overridden set of packages itself
+    my-rubylang-tools = with pkgs; buildEnv {
+      name = "my-rubylang-tools";
+      paths = [
+        ruby
+        # "ruby-1.9"
+        # "ruby-2.1"
+        # "ruby-2.2"
+        # "ruby-2.3"
+
+        bundix
+        bundler
+        #excon
+        #rake  # Clashes with bundler?
+      ];
+    };
+
+    # pkgs is your overridden set of packages itself
+    my-rustlang-tools = with pkgs; buildEnv {
+      name = "my-rustlang-tools";
+      paths = [
+        rustc
+        #rustfmt   ## Can't compile rustc!
+      ];
+    };
+
+    # pkgs is your overridden set of packages itself
+    my-nodejs-tools = with pkgs; buildEnv {
+      name = "my-nodejs-tools";
+      paths = [
+        nodejs
+        npm2nix
+      ];
+    };
+
+    # pkgs is your overridden set of packages itself
+    my-java-tools = with pkgs; buildEnv {
+      name = "my-java-tools";
+      paths = [
+        gradle
+        leiningen
+        scala
+        sbt
+      ];
+    };
+
+    # pkgs is your overridden set of packages itself
+    my-golang-tools = with pkgs; buildEnv {
+      name = "my-golang-tools";
+      paths = [
+        go
+
+        direnv
+        go2nix
+        git-lfs
+        gitAndTools.git-annex-remote-b2
+        packer
       ];
     };
   };
