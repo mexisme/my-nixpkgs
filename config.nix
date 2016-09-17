@@ -36,6 +36,7 @@
         python27Packages.hg-git
         #python35Packages.hg-git
         #rake  # Clashes with bundler?
+        #rustfmt   ## Can't compile rustc!
         sbt
         silver-searcher
         subversion
@@ -94,7 +95,7 @@
         lame
         mc
         "nix-zsh-completions"
-        packer
+        packer   ## Problems with go and SSL
         pwgen
         python35Packages.awscli
         screen
