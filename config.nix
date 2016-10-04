@@ -64,6 +64,7 @@
         faad2
         flac
         htop
+        imagemagick
         irssi
         #irssi_otr   # Appears to use GCC-isms on linker?
         lame
