@@ -120,6 +120,7 @@
     my-rustlang-tools = with pkgs; buildEnv {
       name = "my-rustlang-tools";
       paths = [
+        cargo
         rustc
         #rustfmt   ## Can't compile rustc!
       ];
