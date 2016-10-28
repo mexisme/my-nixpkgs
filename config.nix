@@ -19,6 +19,7 @@
         asciidoc
         "apache-maven"
         cmake
+        darcs
         editorconfig-core-c
         emacs
         git
@@ -70,9 +71,13 @@
         lame
         mc
         "nix-zsh-completions"
+        openssh
+        postgresql
         pwgen
+        redis
         screen
         tmux
+        wget
         xz
         zile
         zsh
@@ -115,6 +120,7 @@
     my-rustlang-tools = with pkgs; buildEnv {
       name = "my-rustlang-tools";
       paths = [
+        cargo
         rustc
         rustfmt   ## Can't compile rustc!
       ];
