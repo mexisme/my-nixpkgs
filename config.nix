@@ -19,6 +19,7 @@
         asciidoc
         "apache-maven"
         cmake
+        darcs
         editorconfig-core-c
         emacs
         git
@@ -64,14 +65,19 @@
         faad2
         flac
         htop
+        imagemagick
         irssi
         #irssi_otr   # Appears to use GCC-isms on linker?
         lame
         mc
         "nix-zsh-completions"
+        openssh
+        postgresql
         pwgen
+        redis
         screen
         tmux
+        wget
         xz
         zile
         zsh
@@ -114,6 +120,7 @@
     my-rustlang-tools = with pkgs; buildEnv {
       name = "my-rustlang-tools";
       paths = [
+        cargo
         rustc
         #rustfmt   ## Can't compile rustc!
       ];
