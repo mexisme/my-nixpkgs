@@ -25,6 +25,7 @@
         git
         gitAndTools.gitflow
         mr
+        multimarkdown   # Appears to be less-functional
         patchelf
         silver-searcher
         subversion
@@ -96,6 +97,7 @@
         python35Packages.awscli
         python27Packages.hg-git
         #python35Packages.hg-git
+        #python35Packages.markdown2
       ];
     };
 
