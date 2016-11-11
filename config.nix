@@ -23,6 +23,7 @@
         editorconfig-core-c
         emacs
         git
+        gitAndTools.git-remote-hg
         gitAndTools.gitflow
         mr
         multimarkdown   # Appears to be less-functional
