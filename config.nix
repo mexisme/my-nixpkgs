@@ -23,8 +23,10 @@
         editorconfig-core-c
         emacs
         git
+        gitAndTools.git-remote-hg
         gitAndTools.gitflow
         mr
+        multimarkdown   # Appears to be less-functional
         patchelf
         silver-searcher
         subversion
@@ -58,7 +60,6 @@
     my-tools = with pkgs; buildEnv {
       name = "my-tools";
       paths = [
-        #cacert  # This seems to be installed by default, now?
         curl
         ddrescue
         #faac
@@ -96,6 +97,7 @@
         python35Packages.awscli
         python27Packages.hg-git
         #python35Packages.hg-git
+        #python35Packages.markdown2
       ];
     };
 
