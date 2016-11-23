@@ -83,6 +83,8 @@
         xz
         zile
         zsh
+
+        salt
       ];
     };
 
