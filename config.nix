@@ -28,6 +28,7 @@
         mr
         multimarkdown   # Appears to be less-functional
         patchelf
+        readline
         silver-searcher
         subversion
         upx
