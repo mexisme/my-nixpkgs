@@ -84,7 +84,7 @@
         zile
         zsh
 
-        salt
+        #salt  # Tries to load openssl.../lib/libcrypto.so instead of .../libcrypto.dylib on macOS
       ];
     };
 
