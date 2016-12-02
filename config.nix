@@ -69,7 +69,7 @@
         flac
         htop
         imagemagick
-        irssi
+        #irssi
         #irssi_otr   # Appears to use GCC-isms on linker?
         lame
         mc
@@ -80,6 +80,7 @@
         redis
         screen
         tmux
+        weechat
         wget
         xz
         zile
