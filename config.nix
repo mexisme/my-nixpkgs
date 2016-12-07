@@ -102,6 +102,7 @@
         python27Packages.hg-git
         #python35Packages.hg-git
         #python35Packages.markdown2
+        python35Packages.yamllint
       ];
     };
 
