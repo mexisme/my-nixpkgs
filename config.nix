@@ -72,6 +72,7 @@
         #irssi_otr   # Appears to use GCC-isms on linker?
         lame
         mc
+        neovim
         "nix-zsh-completions"
         openssh
         postgresql
