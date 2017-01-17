@@ -80,6 +80,7 @@
         redis
         screen
         tmux
+        vagrant
         weechat
         wget
         xz
