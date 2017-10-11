@@ -6,11 +6,122 @@
     jdk = jdk8;
     openjdk = openjdk8;
     # The standard version will only work Linux
-    mc = lib.callPackageWith (pkgs_ // xlibs) ./pkgs/mc { };
+    # mc = lib.callPackageWith (pkgs_ // xlibs) ./pkgs/mc { };
     python3 = python35;
     #python = python35;
+    #go = "nixos-unstable".go;
 
     #excon = lib.callPackageWith pkgs_ ./pkgs/ruby-modules/excon {};
+
+    all = with pkgs; buildEnv {
+      name = "all";
+      paths = [
+        my-tools
+        my-x-tools
+        my-net-tools
+        my-kde-tools
+
+        my-x-graphics-tools
+
+        my-dev-tools
+        my-dev-langs-libs
+        my-python-tools
+        my-rubylang-tools
+        my-rustlang-tools
+        my-nodejs-tools
+        my-java-tools
+        my-golang-tools
+      ];
+    };
+
+    # pkgs is your overridden set of packages itself
+    my-tools = with pkgs; buildEnv {
+      name = "my-tools";
+      paths = [
+        ddrescue
+        faac
+        faad2
+        flac
+        gnupg
+        gpgme
+        gtypist
+        htop
+        imagemagick
+        lame
+        mc
+        #neovim
+        "nix-zsh-completions"
+        postgresql
+        pwgen
+        redis
+        screen
+        tmux
+        vagrant
+        xz
+        zile
+        zsh
+
+        #salt
+      ];
+    };
+
+    # pkgs is your overridden set of packages itself
+    my-net-tools = with pkgs; buildEnv {
+      name = "my-net-tools";
+      paths = [
+        #cacert  # This seems to be installed by default, now?
+        curl
+        #irssi
+        #irssi_otr   # Appears to use GCC-isms on linker?
+        lftp
+        ncftp
+        openssh
+        telnet
+        weechat
+        wget
+      ];
+    };
+
+    # pkgs is your overridden set of packages itself
+    my-x-tools = with pkgs; buildEnv {
+      name = "my-x-tools";
+      paths = [
+        desktop_file_utils
+        keepassx-community
+        meld
+        pass
+        pavucontrol
+        qtpass
+        skype
+        slack
+        #spotify
+      ];
+    };
+
+    # pkgs is your overridden set of packages itself
+    my-kde-tools = with pkgs; buildEnv {
+      name = "my-kde-tools";
+      paths = [
+        ark
+        kate
+        kcalc
+        # kgpg
+        gwenview
+        okteta
+        okular
+        spectacle
+      ];
+    };
+
+    # pkgs is your overridden set of packages itself
+    my-x-graphics-tools = with pkgs; buildEnv {
+      name = "my-x-graphics-tools";
+      paths = [
+        ghostscriptX
+        inkscape
+        # synfigstudio
+      ];
+    };
 
     # pkgs is your overridden set of packages itself
     my-dev-tools = with pkgs; buildEnv {
@@ -25,6 +136,7 @@
         git
         gitAndTools.git-remote-hg
         gitAndTools.gitflow
+        gnumake
         mr
         multimarkdown   # Appears to be less-functional
         patchelf
@@ -42,8 +154,8 @@
         # Languages:
         elixir
         # elixirscript is not yet in Nix
-        ghc
-        #stack  # libsecurity_utilities-osx-10.7.5 fails to build
+        #ghc
+        stack  # libsecurity_utilities-osx-10.7.5 fails to build
 
         # Libraries:
         #excon
@@ -54,41 +166,6 @@
         openssl
         pkgconfig
 
-      ];
-    };
-
-    # pkgs is your overridden set of packages itself
-    my-tools = with pkgs; buildEnv {
-      name = "my-tools";
-      paths = [
-        #cacert  # This seems to be installed by default, now?
-        curl
-        ddrescue
-        faac
-        faad2
-        flac
-        htop
-        imagemagick
-        #irssi
-        #irssi_otr   # Appears to use GCC-isms on linker?
-        lame
-        mc
-        neovim
-        "nix-zsh-completions"
-        openssh
-        postgresql
-        pwgen
-        redis
-        screen
-        tmux
-        vagrant
-        weechat
-        wget
-        xz
-        zile
-        zsh
-
-        salt
       ];
     };
 
@@ -149,6 +226,7 @@
     my-java-tools = with pkgs; buildEnv {
       name = "my-java-tools";
       paths = [
+        jdk8
         gradle
         leiningen
         scala
@@ -163,6 +241,7 @@
         go
 
         direnv
+        glide
         go2nix
         git-lfs
         gitAndTools.git-annex-remote-b2
