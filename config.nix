@@ -17,9 +17,11 @@
       name = "all";
       paths = [
         my-tools
-        my-x-tools
         my-net-tools
-        my-kde-tools
+
+        my-x-tools
+        my-gnome-tools
+        # my-kde-tools
 
         my-x-graphics-tools
 
@@ -94,7 +96,15 @@
         qtpass
         skype
         slack
-        #spotify
+        spotify
+      ];
+    };
+
+    # pkgs is your overridden set of packages itself
+    my-gnome-tools = with pkgs; buildEnv {
+      name = "my-gnome-tools";
+      paths = [
+        #rhythmbox
       ];
     };
 
