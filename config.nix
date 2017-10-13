@@ -75,6 +75,7 @@
         curl
         #irssi
         #irssi_otr   # Appears to use GCC-isms on linker?
+        keybase
         lftp
         ncftp
         openssh
@@ -90,6 +91,7 @@
       paths = [
         desktop_file_utils
         keepassx-community
+        keybase-gui
         meld
         pass
         pavucontrol
