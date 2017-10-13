@@ -75,7 +75,7 @@
         curl
         #irssi
         #irssi_otr   # Appears to use GCC-isms on linker?
-        keybase
+        #keybase
         lftp
         ncftp
         openssh
