@@ -95,6 +95,7 @@
         meld
         pass
         pavucontrol
+        qsyncthingtray
         qtpass
         skype
         slack
