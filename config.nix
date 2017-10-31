@@ -26,7 +26,9 @@
         my-x-graphics-tools
 
         my-dev-tools
+        my-x-dev-tools
         my-dev-langs-libs
+        my-c-tools
         my-python-tools
         my-rubylang-tools
         my-rustlang-tools
@@ -161,6 +163,15 @@
     };
 
     # pkgs is your overridden set of packages itself
+    my-x-dev-tools = with pkgs; buildEnv {
+      name = "my-x-dev-tools";
+      paths = [
+        atom
+        vscode
+      ];
+    };
+
+    # pkgs is your overridden set of packages itself
     my-dev-langs-libs = with pkgs; buildEnv {
       name = "my-dev-langs-libs";
       paths = [
@@ -179,6 +190,15 @@
         openssl
         pkgconfig
 
+      ];
+    };
+
+    # pkgs is your overridden set of packages itself
+    my-c-tools = with pkgs; buildEnv {
+      name = "my-c-tools";
+      paths = [
+        #clang
+        gcc
       ];
     };
 
