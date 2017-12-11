@@ -21,7 +21,7 @@
 
         my-x-tools
         my-gnome-tools
-        # my-kde-tools
+        #my-kde-tools
 
         my-x-graphics-tools
 
@@ -101,9 +101,11 @@
         pavucontrol
         #qsyncthingtray
         qtpass
+        signal-desktop
         skype
         slack
         spotify
+        #syncthing-tray
       ];
     };
 
@@ -216,9 +218,11 @@
         pipenv
 
         mercurial
-        python35Packages.awscli
+        #python35Packages.awscli
+        awscli
         python27Packages.hg-git
         #python35Packages.hg-git
+        #hg-git
         #python35Packages.markdown2
         python36Packages.yamllint
       ];
