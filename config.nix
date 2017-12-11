@@ -7,7 +7,8 @@
     openjdk = openjdk8;
     # The standard version will only work Linux
     # mc = lib.callPackageWith (pkgs_ // xlibs) ./pkgs/mc { };
-    python3 = python35;
+    python3 = python36;
+    #python3 = python36Full;
     #python = python35;
     #go = "nixos-unstable".go;
 
