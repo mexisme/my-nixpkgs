@@ -43,6 +43,7 @@
       name = "my-tools";
       paths = [
         ddrescue
+        drive
         faac
         faad2
         flac
@@ -55,11 +56,13 @@
         mc
         #neovim
         "nix-zsh-completions"
+        pass
         postgresql
         pwgen
         redis
         screen
         tmux
+        python36Packages.upass
         vagrant
         xz
         zile
@@ -95,9 +98,8 @@
         keepassx-community
         keybase-gui
         meld
-        pass
         pavucontrol
-        qsyncthingtray
+        #qsyncthingtray
         qtpass
         skype
         slack
@@ -110,6 +112,7 @@
       name = "my-gnome-tools";
       paths = [
         #rhythmbox
+        gpa
       ];
     };
 
@@ -210,12 +213,14 @@
         python3
         #python35
 
+        pipenv
+
         mercurial
         python35Packages.awscli
         python27Packages.hg-git
         #python35Packages.hg-git
         #python35Packages.markdown2
-        python35Packages.yamllint
+        python36Packages.yamllint
       ];
     };
 
