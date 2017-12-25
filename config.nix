@@ -164,6 +164,7 @@
         readline
         silver-searcher
         subversion
+        uncrustify
         upx
       ];
     };
