@@ -96,6 +96,7 @@
     my-x-tools = with pkgs; buildEnv {
       name = "my-x-tools";
       paths = [
+        calibre
         desktop_file_utils
         keepassx-community
         keybase-gui
@@ -159,8 +160,9 @@
       paths = [
         asciidoc
         "apache-maven"
+        bazel
         cmake
-        darcs
+        #darcs
         editorconfig-core-c
         emacs
         git
@@ -170,6 +172,7 @@
         mr
         multimarkdown   # Appears to be less-functional
         patchelf
+        protobuf
         readline
         silver-searcher
         subversion
@@ -226,13 +229,17 @@
         python3
         #python35
 
+        python27Packages.pip
+        python36Packages.pip
+        python27Packages.pip-tools
+        python36Packages.pip-tools
         pipenv
 
         mercurial
         #python35Packages.awscli
         awscli
         python27Packages.hg-git
-        #python35Packages.hg-git
+        #python36Packages.hg-git
         #hg-git
         #python35Packages.markdown2
         python36Packages.yamllint
