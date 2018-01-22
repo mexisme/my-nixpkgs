@@ -24,6 +24,7 @@
         my-gnome-tools
         #my-kde-tools
 
+        my-games
         my-x-graphics-tools
 
         my-dev-tools
@@ -131,6 +132,14 @@
         okteta
         okular
         spectacle
+      ];
+    };
+
+    # pkgs is your overridden set of packages itself
+    my-games = with pkgs; buildEnv {
+      name = "my-games";
+      paths = [
+        minecraft
       ];
     };
 
