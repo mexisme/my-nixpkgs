@@ -174,6 +174,7 @@
         patchelf
         protobuf
         readline
+        ripgrep
         silver-searcher
         subversion
         uncrustify
