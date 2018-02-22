@@ -34,7 +34,7 @@
         my-python-tools
         my-rubylang-tools
         my-rustlang-tools
-        my-nodejs-tools
+        my-javascript-tools
         my-java-tools
         my-golang-tools
       ];
@@ -161,6 +161,7 @@
         asciidoc
         "apache-maven"
         bazel
+        binutils
         cmake
         #darcs
         editorconfig-core-c
@@ -179,6 +180,7 @@
         subversion
         uncrustify
         upx
+        zlib
       ];
     };
 
@@ -275,11 +277,21 @@
     };
 
     # pkgs is your overridden set of packages itself
+    my-javascript-tools = with pkgs; buildEnv {
+      name = "my-javascript-tools";
+      paths = [
+        my-nodejs-tools
+      ];
+    };
+
+    # pkgs is your overridden set of packages itself
     my-nodejs-tools = with pkgs; buildEnv {
       name = "my-nodejs-tools";
       paths = [
         nodejs
+        nodejs-9_x
         npm2nix
+        yarn
       ];
     };
 
